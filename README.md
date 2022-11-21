@@ -4,7 +4,10 @@ this repository contains datasets of inputs and outputs from three different ene
 
 # Models versions:
 the model was tested with the following Versions:
-OSeMOSYS: 
+OSeMOSYS:
+OSeMOSYS data were uploaded to the model using the interface developed by Eng. Mohammed Amin Tahavori available at:
+https://github.com/mohammadamint/PYOF.git
+
 OSeMOSYS python model available at: 
 https://github.com/OSeMOSYS/OSeMOSYS_Pyomo/blob/master/osemosys.py
 
