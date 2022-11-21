@@ -1,0 +1,347 @@
+##
+# NEW TECHNLOGIES GEOGRAPHICAL DISTRBUTION ACROSS THE COUNTRY 
+##
+
+locations:  
+
+    WSUDAN:
+        techs:
+            CROST_new:
+                constraints:
+                    energy_cap_max: inf
+            HFOST_new:
+                constraints:
+                    energy_cap_max: inf 
+            NG_SCGT:
+                constraints:
+                    energy_cap_max: inf 
+            NG_CCGT:
+                constraints:
+                    energy_cap_max: inf 
+            LFO_SCGT_new:
+                constraints:
+                    energy_cap_max: inf 
+            LFO_CCGT_new:
+                constraints:
+                    energy_cap_max: inf 
+            COST:
+                constraints:
+                    energy_cap_max: inf 
+            GEOST:
+                constraints:
+                    energy_cap_max: 160000  
+            CSP:
+                constraints:
+                    energy_cap_max: inf
+            PV_UTL:
+                constraints:
+                    energy_cap_max: 54703000000 
+            GEN_SET_new:
+                constraints:
+                    energy_cap_max: inf 
+            WIND:
+                constraints:
+                    energy_cap_max: 1182000000    
+  
+    NSUDAN:
+        techs:
+            CROST_new: 
+                constraints: 
+                    energy_cap_max: inf
+            HFOST_new: 
+                constraints:                                    
+                    energy_cap_max: inf
+            NG_SCGT: 
+                constraints:                                    
+                    energy_cap_max: inf
+            NG_CCGT:
+                constraints:                                    
+                    energy_cap_max: inf
+            LFO_SCGT_new:
+                constraints:                                    
+                    energy_cap_max: inf
+            LFO_CCGT_new:
+                constraints:                                    
+                    energy_cap_max: inf
+            COST:
+                constraints:                                    
+                    energy_cap_max: inf
+            GEOST:
+                constraints:                                    
+                    energy_cap_max: 80000
+            LHYD_new:
+                constraints:                                    
+                    energy_cap_max: 793000
+            CSP:
+                constraints:                                    
+                    energy_cap_max: inf
+            PV_UTL:
+                constraints:                                    
+                    energy_cap_max: 29838000000
+            GEN_SET_new:
+                constraints:                                    
+                    energy_cap_max: inf
+            WIND:
+                constraints:                                    
+                    energy_cap_max: 591000000
+
+    KRT:
+        techs:
+            CROST_new: 
+                constraints: 
+                    energy_cap_max: inf
+            HFOST_new: 
+                constraints:                                     
+                    energy_cap_max: inf
+            NG_SCGT: 
+                constraints:                                    
+                    energy_cap_max: inf
+            NG_CCGT:
+                constraints:                                    
+                    energy_cap_max: inf
+            LFO_SCGT_new:
+                constraints:                                    
+                    energy_cap_max: inf 
+            LFO_CCGT_new:
+                constraints:                                    
+                    energy_cap_max: inf 
+            COST:
+                constraints:                                    
+                    energy_cap_max: inf  
+            CSP:
+                constraints:                                    
+                    energy_cap_max: inf
+            PV_UTL:
+                constraints:                                    
+                    energy_cap_max: 2486500000 
+            GEN_SET_new:
+                constraints:                                    
+                    energy_cap_max: inf 
+            WIND:
+                constraints:                                    
+                    energy_cap_max: 49200000                      
+    
+    ESUDAN:
+        techs:
+            CROST_new: 
+                constraints:
+                    energy_cap_max: inf
+            HFOST_new: 
+                constraints:                                    
+                    energy_cap_max: inf
+            NG_SCGT: 
+                constraints:                                    
+                    energy_cap_max: inf
+            NG_CCGT:
+                constraints:                                    
+                    energy_cap_max: inf 
+            LFO_SCGT_new:
+                constraints:                                    
+                    energy_cap_max: inf 
+            LFO_CCGT_new:
+                constraints:                                    
+                    energy_cap_max: inf  
+            COST:
+                constraints:                                    
+                    energy_cap_max: inf 
+            GEOST:
+                constraints:                                    
+                    energy_cap_max: 80000 
+            BMPP:
+                constraints:                                    
+                    energy_cap_max: 1033000 
+            CSP:
+                constraints:                                    
+                    energy_cap_max: inf 
+            PV_UTL:
+                constraints:                                    
+                    energy_cap_max: 22378000000
+            GEN_SET_new:
+                constraints:                                    
+                    energy_cap_max: inf 
+            WIND:
+                constraints:                                    
+                    energy_cap_max: 541600000                     
+    
+    CSUDAN:
+        techs:
+            CROST_new: 
+                constraints: 
+                    energy_cap_max: inf
+            HFOST_new: 
+                constraints:                                    
+                    energy_cap_max: inf                   
+            NG_SCGT: 
+                constraints:                                     
+                    energy_cap_max: inf
+            NG_CCGT:
+                constraints:                                     
+                    energy_cap_max: inf
+            LFO_SCGT_new:
+                constraints:                                     
+                    energy_cap_max: inf
+            LFO_CCGT_new:
+                constraints:                                     
+                    energy_cap_max: inf
+            COST:
+                constraints:                                     
+                    energy_cap_max: inf
+            GEOST:
+                constraints:                                     
+                    energy_cap_max: 80000
+            BMPP:
+                constraints:                                     
+                    energy_cap_max: 1033000
+            LHYD_new:
+                constraints:                                     
+                    energy_cap_max: 2379000
+            CSP:
+                constraints:                                     
+                    energy_cap_max: inf
+            PV_UTL:
+                constraints:                                     
+                    energy_cap_max: 7460000000
+            GEN_SET_new:
+                constraints:                                     
+                    energy_cap_max: inf
+            WIND:
+                constraints:                                     
+                    energy_cap_max: 246200000                              
+
+    EGP:
+        techs:
+            EGP_import:
+                constraints: 
+                    energy_cap_max: inf
+
+    ETH:
+        techs:
+            ETH_import:
+                constraints: 
+                    energy_cap_max: inf
+    
+
+    
+##
+# NEW TRANSMISSION LINKS BETWEEN REGIONS 
+##
+
+links:
+
+    WSUDAN,NSUDAN:
+        techs:
+            HVAC_new:
+                constraints:
+                    energy_cap_max: 1e+12
+                costs.monetary:
+                    energy_cap: 800 #€/kW
+    WSUDAN,KRT:
+        techs:
+            HVAC_new:
+                constraints:
+                    energy_cap_max: 1e+12
+                costs.monetary:
+                    energy_cap: 800 #€/kW           
+    WSUDAN,CSUDAN:
+        techs:
+            HVAC_new:
+                constraints:
+                    energy_cap_max: 1e+12
+                costs.monetary:
+                    energy_cap: 800 #€/kW   
+    NSUDAN,KRT:
+        techs:
+            HVAC_new:
+                constraints:
+                    energy_cap_max: 1e+12
+                costs.monetary:
+                    energy_cap: 800 #€/kW                       
+    NSUDAN,ESUDAN:
+        techs:
+            HVAC_new:
+                constraints:
+                    energy_cap_max: 1e+12
+                costs.monetary:
+                    energy_cap: 800 #€/kW                      
+    NSUDAN,CSUDAN:
+        techs:
+            HVAC_new:
+                constraints:
+                    energy_cap_max: 1e+12
+                costs.monetary:
+                    energy_cap: 800 #€/kW                           
+    KRT,ESUDAN:
+        techs:
+            HVAC_new:
+                constraints:
+                    energy_cap_max: 1e+12 #kW
+                costs.monetary:
+                    energy_cap: 800 # €/kW
+    KRT,CSUDAN:
+        techs:
+            HVAC_new:
+                constraints:
+                    energy_cap_max: 1e+12 #kW
+                costs.monetary:
+                    energy_cap: 800 # €/kW
+    ESUDAN,CSUDAN:
+        techs:
+            HVAC_new:
+                constraints:
+                    energy_cap_max: 1e+12 #kW
+                costs.monetary:
+                    energy_cap: 800 # €/kW
+
+    EGP,NSUDAN:
+        techs:
+            International_HVAC_new:
+                constraints:
+                    energy_cap_max: 1e+12
+                costs.monetary:
+                    energy_cap: 800 #€/kW
+    ETH,ESUDAN:
+        techs:
+            International_HVAC_new:
+                constraints:
+                    energy_cap_max: 1e+12
+                costs.monetary:
+                    energy_cap: 800 #€/kW
+
+
+    ## local transmission 
+
+    WSUDAN,WSUDAN:
+        techs:
+            local_transmission_new:
+                constraints:
+                    energy_cap_max: 1e+12
+                costs.monetary:
+                    energy_cap: 800 #€/kW
+    NSUDAN,NSUDAN:
+        techs:
+            local_transmission_new:
+                constraints:
+                    energy_cap_max: 1e+12
+                costs.monetary:
+                    energy_cap: 800 #€/kW
+    KRT,KRT:
+        techs:
+            local_transmission_new:
+                constraints:
+                    energy_cap_max: 1e+12
+                costs.monetary:
+                    energy_cap: 800 #€/kW
+    ESUDAN,ESUDAN:
+        techs:
+            local_transmission_new:
+                constraints:
+                    energy_cap_max: 1e+12
+                costs.monetary:
+                    energy_cap: 800 #€/kW
+    CSUDAN,CSUDAN:
+        techs:
+            local_transmission_new:
+                constraints:
+                    energy_cap_max: 1e+12
+                costs.monetary:
+                    energy_cap: 800 #€/kW
