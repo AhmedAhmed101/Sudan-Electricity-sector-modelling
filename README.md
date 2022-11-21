@@ -24,14 +24,14 @@ https://hypatia-py.readthedocs.io/en/latest/installation.html
 
 # units 
 For OSeMOSYS and Hypatia the following units were used:
-Capacity GW.
-Activity PJ.
-Monetary million USD/ capacity or Activity unit.
+* Capacity GW.
+* Activity PJ.
+* Monetary million USD/ capacity or Activity unit.
 
 For Calliope: 
-Capacity kW.
-Activity kWh.
-Monetary USD/ capacity or Activity unit.
+* Capacity kW.
+* Activity kWh.
+* Monetary USD/ capacity or Activity unit.
 
 # Notes:
 * In calliope the Avilability factor of conventional power plants was only considered for the existing power plants.
