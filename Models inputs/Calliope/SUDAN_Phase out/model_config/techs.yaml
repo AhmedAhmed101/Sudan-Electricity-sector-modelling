@@ -1,0 +1,212 @@
+##
+# EXISTING TECHNOLOGIES DEFINITIONS
+##
+
+
+techs:
+
+    ##
+    # Supply
+    ##
+    
+    CROST:
+        essentials:
+            name: 'crude oil steam turbine'
+            color: '#FF3367'
+            parent: supply
+            carrier_out: power
+        constraints:
+            resource: 0.82
+            resource_unit: energy_per_cap
+            energy_eff: 0.37
+            lifetime: 35
+        costs:
+            monetary:
+                interest_rate: 0.216
+                energy_cap: 0  # €/kW
+                om_prod: 0.029  # €/kWh
+                om_annual: 75 # €/kW/year
+                om_con: 0.357 # €/kWh
+
+    HFOST:
+        essentials:
+            name: 'HFO steam turbine'
+            color: '#FF339C'
+            parent: supply
+            carrier_out: power
+        constraints:
+            resource: 0.73
+            resource_unit: energy_per_cap
+            energy_eff: 0.37 
+            lifetime: 35
+        costs:
+            monetary:
+                interest_rate: 0.216
+                energy_cap: 0  # €/kW
+                om_prod: 0.029  # €/kWh
+                om_annual: 75 # €/kW/year
+                om_con: 0.37 # €/kWh  
+    
+    SCGT_LFO:
+        essentials:
+            name: 'LFO fired SCGT'
+            color: '#BC33FF'
+            parent: supply
+            carrier_out: power
+        constraints:
+            resource: 0.61
+            resource_unit: energy_per_cap
+            energy_eff: 0.35
+            lifetime: 25
+        costs:
+            monetary:
+                interest_rate: 0.216
+                energy_cap: 0  # €/kW
+                om_prod: 0.021  # €/kWh
+                om_annual: 45 # €/kW/year
+                om_con: 0.542 # €/kWh
+
+    CCGT_LFO:
+        essentials:
+            name: 'LFO fired CCGT'
+            color: '#A033FF'
+            parent: supply
+            carrier_out: power
+        constraints:
+            resource: 0.854
+            resource_unit: energy_per_cap
+            energy_eff: 0.48
+            lifetime: 30
+        costs:
+            monetary:
+                interest_rate: 0.216
+                energy_cap: 0  # €/kW
+                om_prod: 0.016  # €/kWh
+                om_annual: 35 # €/kW/year
+                om_con: 0.542 # €/kWh
+
+    GEN_SET:
+        essentials:
+            name: 'diesel generator'
+            color: '#3338FF'
+            parent: supply
+            carrier_out: power
+        constraints:
+            resource: 0.3
+            resource_unit: energy_per_cap
+            energy_eff: 0.3
+            lifetime: 10
+        costs:
+            monetary:
+                interest_rate: 0.216
+                energy_cap: 0  # €/kW
+                om_prod: 0.014  # €/kWh
+                om_annual: 23 # €/kW/year
+                om_con: 0.542 # €/kWh             
+
+    LHYD:
+        essentials:
+            name: 'Large hydro power plant'
+            color: '#8A33FF'
+            parent: supply_plus
+            carrier_out: power
+        constraints:
+            resource: file=hydro_reservoirs.csv
+            resource_unit: energy_per_cap
+            force_resource: False
+            lifetime: 50
+        costs:
+            monetary:
+                interest_rate: 0.216
+                energy_cap: 0  # €/kW
+                om_annual: 90 # €/kW/year
+                om_prod: 0.026 # €/kWh
+
+    SHYD:
+        essentials:
+            name: 'small hydro power plant'
+            color: '#5933FF'
+            parent: supply_plus
+            carrier_out: power
+        constraints:
+            resource: file=hydro_reservoirs.csv
+            force_resource: False
+            resource_unit: energy_per_cap
+            resource_eff: 0.635
+            lifetime: 50
+        costs:
+            monetary:
+                interest_rate: 0.216
+                energy_cap: 0  # €/kW
+                om_annual: 75 # €/kW/year
+                om_prod: 0.026 # €/kWh
+   
+
+    ##
+    # Transmission
+    ##
+    
+    # inter-regional transmission
+ 
+    HVAC:  
+        essentials:
+            name: 'HVAC crossborder transmission'
+            parent: transmission
+            carrier: power
+        constraints:
+            energy_eff: 0.95
+            lifetime: 50
+        costs:
+            monetary:
+                interest_rate: 0.216
+                om_prod: 0.00167  # $/kWh, adapted from Calliope-UK
+
+
+    
+    # local transmission
+
+    local_transmission: 
+        essentials:
+            name: 'local power transmission'
+            parent: transmission
+            carrier: power
+        constraints:
+            lifetime: 50 
+            energy_eff: 0.85
+        costs:
+            monetary:
+                om_prod: 0.00167  # $/kWh
+                interest_rate: 0.216         
+    
+    ##
+    # Demand
+    ##
+
+    residential_demand:
+        essentials:
+            name: 'residential Power demand'
+            color: '#000000'
+            parent: demand
+            carrier: power
+
+    services_demand:
+        essentials:
+            name: 'services Power demand'
+            color: '#000000'
+            parent: demand
+            carrier: power
+
+    industrial_demand:
+        essentials:
+            name: 'industrial Power demand'
+            color: '#000000'
+            parent: demand
+            carrier: power
+
+    agriculture_demand:
+        essentials:
+            name: 'agriculture Power demand'
+            color: '#000000'
+            parent: demand
+            carrier: power
+
