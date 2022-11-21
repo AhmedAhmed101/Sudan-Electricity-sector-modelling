@@ -1,0 +1,244 @@
+##
+# LOCATIONS DEFINITION AND THE EXISTING TECHNOLOGIES IN EACH REGION
+##
+
+locations:
+
+    WSUDAN:
+        techs:
+            GEN_SET:
+                constraints:
+                    energy_cap_equals: 104200 #kW  
+            residential_demand:
+                constraints:
+                    resource: file=residential_demand.csv
+            services_demand:
+                constraints:
+                    resource: file=services_demand.csv
+            industrial_demand:
+                constraints:
+                    resource: file=industrial_demand.csv
+            agriculture_demand:
+                constraints:
+                    resource: file=agriculture_demand.csv
+       
+        coordinates: {lat: 13.1782, lon: 30.2167}
+  
+
+    NSUDAN:
+        techs:
+            LHYD:
+                constraints:
+                    energy_cap_equals: 1570000 #kW
+            residential_demand:
+                constraints:
+                    resource: file=residential_demand.csv
+            services_demand:
+                constraints:
+                    resource: file=services_demand.csv
+            industrial_demand:
+                constraints:
+                    resource: file=industrial_demand.csv
+            agriculture_demand:
+                constraints:
+                    resource: file=agriculture_demand.csv 
+
+        coordinates: {lat: 19.1461, lon: 30.4703}
+ 
+   
+    KRT:
+        techs:              
+            HFOST:
+                constraints:
+                    energy_cap_equals: 490000 #kW
+            SCGT_LFO:
+                constraints:
+                    energy_cap_equals: 150000 #kW
+            CCGT_LFO:
+                constraints:
+                    energy_cap_equals: 469000 #kW
+            SHYD:
+                constraints:
+                    energy_cap_equals: 30400 #kW
+            residential_demand:
+                constraints:
+                    resource: file=residential_demand.csv
+            services_demand:
+                constraints:
+                    resource: file=services_demand.csv
+            industrial_demand:
+                constraints:
+                    resource: file=industrial_demand.csv
+            agriculture_demand:
+                constraints:
+                    resource: file=agriculture_demand.csv
+              
+        coordinates: {lat: 15.5007, lon: 32.5599}
+        
+
+    ESUDAN:
+        techs:
+            SHYD:
+                constraints:
+                    energy_cap_equals: 17800 #kW
+            GEN_SET:
+                constraints:
+                    energy_cap_equals: 40000 #kW
+            residential_demand:
+                constraints:
+                    resource: file=residential_demand.csv
+            services_demand:
+                constraints:
+                    resource: file=services_demand.csv
+            industrial_demand:
+                constraints:
+                    resource: file=industrial_demand.csv
+            agriculture_demand:
+                constraints:
+                    resource: file=agriculture_demand.csv
+ 
+        coordinates: {lat: 19.5903, lon: 37.1902} 
+ 
+
+    CSUDAN:
+        techs:
+            CROST:
+                constraints:
+                    energy_cap_equals: 500000 #kW
+            LHYD:
+                constraints:
+                    energy_cap_equals: 280000 #kW
+            SHYD:
+                constraints:
+                    energy_cap_equals: 15000 #kW
+            residential_demand:
+                constraints:
+                    resource: file=residential_demand.csv
+            services_demand:
+                constraints:
+                    resource: file=services_demand.csv
+            industrial_demand:
+                constraints:
+                    resource: file=industrial_demand.csv
+            agriculture_demand:
+                constraints:
+                    resource: file=agriculture_demand.csv 
+
+        coordinates: {lat: 14.3931, lon: 33.5392}
+
+
+    EGP:
+    
+        coordinates: {lat: 23.9709, lon: 32.8773}
+ 
+
+    ETH:
+    
+        coordinates: {lat: 11.2165, lon: 35.0936}     
+
+    
+    
+    
+##
+# EXISTING TRANSMISSION LINES 
+##
+
+
+links:
+
+    WSUDAN,NSUDAN:
+        techs:
+            HVAC:
+                constraints:
+                    energy_cap_equals: 0
+
+    WSUDAN,KRT:
+        techs:
+            HVAC:
+                constraints:
+                    energy_cap_equals: 0 
+      
+    WSUDAN,CSUDAN:
+        techs:
+            HVAC:
+                constraints:
+                    energy_cap_equals: 250000
+  
+    NSUDAN,KRT:
+        techs:
+            HVAC:
+                constraints:
+                    energy_cap_equals: 250000 
+                    
+    NSUDAN,CSUDAN:
+        techs:
+            HVAC:
+                constraints:
+                    energy_cap_equals: 0
+                    
+    KRT,ESUDAN:
+        techs:
+            HVAC:
+                constraints:
+                    energy_cap_equals: 0
+                  
+    KRT,CSUDAN:
+        techs:
+            HVAC:
+                constraints:
+                    energy_cap_equals: 250000 #kW
+
+    ESUDAN,CSUDAN:
+        techs:
+            HVAC:
+                constraints:
+                    energy_cap_equals: 250000 #kW
+
+
+    EGP,NSUDAN:
+        techs:
+            International_HVAC:
+                constraints:
+                    energy_cap_equals: 70000
+
+    ETH,ESUDAN:
+        techs:
+            International_HVAC:
+                constraints:
+                    energy_cap_equals: 200000   
+
+
+    
+    ## INTRA-REGIONAL TRANSMISSION LINES
+
+    WSUDAN,WSUDAN:
+        techs:
+            local_transmission:
+                constraints:
+                    energy_cap_equals: 0
+
+    NSUDAN,NSUDAN:
+        techs:
+            local_transmission:
+                constraints:
+                    energy_cap_equals: 1e+12
+
+    KRT,KRT:
+        techs:
+            local_transmission:
+                constraints:
+                    energy_cap_equals: 1e+12
+
+    ESUDAN,ESUDAN:
+        techs:
+            local_transmission:    
+                constraints:
+                    energy_cap_equals: 1e+12
+
+    CSUDAN,CSUDAN:
+        techs:
+            local_transmission:
+                constraints:
+                    energy_cap_equals: 1e+12
+
+    

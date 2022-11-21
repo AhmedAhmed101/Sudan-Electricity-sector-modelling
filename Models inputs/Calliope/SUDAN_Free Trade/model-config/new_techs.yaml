@@ -1,0 +1,355 @@
+##
+# DEFINITION OF NEW TECHNOLOGIES
+##
+
+
+techs:
+
+    ##
+    # Supply Technologies
+    ##
+
+
+    CROST_new:
+        essentials:
+            name: 'New crude oil steam turbine'
+            color: '#3354FF'
+            parent: supply
+            carrier_out: power
+        constraints:
+            energy_eff: 0.37
+            lifetime: 35
+            energy_cap_min: 0
+        costs:
+            monetary:
+                interest_rate: 0.216
+                energy_cap: 2500  # €/kW
+                om_prod: 0.029  # €/kWh
+                om_annual: 75 # €/kW/year
+                om_con: 0.357 # €/kWh
+
+
+    HFOST_new:
+        essentials:
+            name: 'New HFO steam turbine'
+            color: '#3373FF'
+            parent: supply
+            carrier_out: power
+        constraints:
+            energy_eff: 0.37
+            lifetime: 35
+            energy_cap_min: 0
+        costs:
+            monetary:
+                interest_rate: 0.216
+                energy_cap: 2500  # €/kW
+                om_prod: 0.029  # €/kWh
+                om_annual: 75 # €/kW/year
+                om_con: 0.37 # €/kWh
+
+    NG_SCGT:
+        essentials:
+            name: 'NG fired SCGT'
+            color: '#338EFF'
+            parent: supply
+            carrier_out: power
+        constraints:
+            energy_eff: 0.3
+            lifetime: 25
+            energy_cap_min: 0
+        costs:
+            monetary:
+                interest_rate: 0.216
+                energy_cap: 700  # €/kW
+                om_prod: 0.021  # €/kWh
+                om_annual: 20 # €/kW/year
+                om_con: 0.25 # €/kWh           
+
+    NG_CCGT:
+        essentials:
+            name: 'NG fired CCGT'
+            color: '#33BAFF'
+            parent: supply
+            carrier_out: power
+        constraints:
+            energy_eff: 0.48
+            lifetime: 30
+            energy_cap_min: 0
+        costs:
+            monetary:
+                interest_rate: 0.216
+                energy_cap: 1200  # €/kW
+                om_prod: 0.016  # €/kWh
+                om_annual: 35 # €/kW/year
+                om_con: 0.25 # €/kWh       
+
+    LFO_SCGT_new:
+        essentials:
+            name: 'New LFO fired SCGT'
+            color: '#33D5FF'
+            parent: supply
+            carrier_out: power
+        constraints:
+            energy_eff: 0.35
+            lifetime: 25
+            energy_cap_min: 0
+        costs:
+            monetary:
+                interest_rate: 0.216
+                energy_cap: 1450  # €/kW
+                om_annual: 45 # €/kW/year
+                om_con: 0.542 # €/kWh
+                om_prod: 0.021 # €/kWh             
+
+    LFO_CCGT_new:
+        essentials:
+            name: 'New LFO fired CCGT'
+            color: '#33EBFF'
+            parent: supply
+            carrier_out: power
+        constraints:
+            energy_eff: 0.48
+            lifetime: 25
+            energy_cap_min: 0
+        costs:
+            monetary:
+                interest_rate: 0.216
+                energy_cap: 1200  # €/kW
+                om_annual: 35 # €/kW/year
+                om_con: 0.542 # €/kWh
+                om_prod: 0.016 # €/kWh           
+
+    COST:
+        essentials:
+            name: 'coal steam turbine'
+            color: '#33FFDF'
+            parent: supply
+            carrier_out: power
+        constraints:
+            energy_eff: 0.37
+            lifetime: 35
+            energy_cap_min: 0
+        costs:
+            monetary:
+                interest_rate: 0.216
+                energy_cap: 2500  # €/kW
+                om_annual: 78 # €/kW/year
+                om_con: 0.094 # €/kWh
+                om_prod: 0.029 # €/kWh            
+
+    GEOST:
+        essentials:
+            name: 'geothermal steam turbine'
+            color: '#33FFBA'
+            parent: supply
+            carrier_out: power
+        constraints:
+            energy_eff: 1
+            lifetime: 25
+            energy_cap_min: 0
+        costs:
+            monetary:
+                interest_rate: 0.216
+                energy_cap: 4000  # €/kW
+                om_annual: 120 # €/kW/year
+                om_con: 0 # €/kWh
+                om_prod: 0.024 # €/kWh            
+
+    BMPP:
+        essentials:
+            name: 'biomass power plant'
+            color: '#33FF82'
+            parent: supply
+            carrier_out: power
+        constraints:
+            energy_eff: 0.35
+            lifetime: 30
+            energy_cap_min: 0
+        costs:
+            monetary:
+                interest_rate: 0.216
+                energy_cap: 2500  # €/kW
+                om_annual: 75 # €/kW/year
+                om_con: 0.045 # €/kWh
+                om_prod: 0.029 # €/kWh            
+
+    LHYD_new:
+        essentials:
+            name: 'New large hydro power plant'
+            color: '#33FF63'
+            parent: supply_plus
+            carrier_out: power
+        constraints:
+            resource: file=hydro_reservoirs.csv 
+            resource_unit: energy_per_cap
+            lifetime: 50
+            energy_cap_min: 0
+        costs:
+            monetary:
+                interest_rate: 0.216
+                energy_cap: 3000  # €/kW
+                om_annual: 90 # €/kW/year
+                om_con: 0 # €/kWh
+                om_prod: 0.026             
+ 
+    CSP:
+        essentials:
+            name: 'concentrated solar power'
+            color: '#33FF35'
+            parent: supply_plus
+            carrier_out: power
+        constraints:
+            resource: file=csp_series.csv
+            resource_unit: energy_per_cap
+            lifetime: 30
+            energy_cap_min: 0
+        costs:
+            monetary:
+                interest_rate: 0.216
+                energy_cap: 2634  # €/kW
+                om_annual: 40.58 # €/kW/year
+                om_con: 0 # €/kWh
+                om_prod: 0.029 # €/kWh            
+ 
+    PV_UTL:
+        essentials:
+            name: 'utility scale PV'
+            color: '#6FFF33'
+            parent: supply_plus
+            carrier_out: power
+        constraints:
+            resource: file=pv_series.csv
+            resource_unit: energy_per_cap
+            lifetime: 24
+            energy_cap_min: 0
+        costs:
+            monetary:
+                interest_rate: 0.216
+                energy_cap: 886  # €/kW
+                om_annual: 17.91 # €/kW/year
+                om_con: 0 # €/kWh
+                om_prod: 0.002 # €/kWh
+
+    GEN_SET_new:
+        essentials:
+            name: 'New diesel generator'
+            color: '#B2FF33'
+            parent: supply
+            carrier_out: power
+        constraints:
+            energy_eff: 0.3
+            resource: 0.3
+            resource_unit: energy_per_cap
+            lifetime: 10
+            energy_cap_min: 0
+        costs:
+            monetary:
+                interest_rate: 0.216
+                energy_cap: 750  # €/kW
+                om_annual: 23 # €/kW/year
+                om_con: 0.542 # €/kWh
+                om_prod: 0.014 # €/kWh             
+
+    WIND:
+        essentials:
+            name: 'onshore wind turbine'
+            color: '#D1FF33'
+            parent: supply_plus
+            carrier_out: power
+        constraints:
+            resource: file=wind_series.csv
+            resource_unit: energy_per_cap
+            lifetime: 25
+            energy_cap_min: 0
+        costs:
+            monetary:
+                interest_rate: 0.216
+                energy_cap: 1078  # €/kW
+                om_annual: 59.56 # €/kW/year
+                om_con: 0 # €/kWh
+                om_prod: 0.029 # €/kWh             
+
+    EGP_import:
+        essentials:
+            name: 'Imports from Egypt'
+            color: '#FF3367'
+            parent: supply
+            carrier_out: power
+        constraints:
+            energy_eff: 1
+            lifetime: 50            
+        costs:
+            monetary:
+                energy_cap: 0 # $/kW
+                interest_rate: 0.216
+                om_prod: 0.06  # $/kWh Adapted as the electricity price for businesses in EGYPT
+
+    ETH_import:
+        essentials:
+            name: 'Imports from Ethiopia'
+            color: '#FF3367'
+            parent: supply
+            carrier_out: power
+        constraints:
+            energy_eff: 1
+            lifetime: 50            
+        costs:
+            monetary:
+                energy_cap: 0 # $/kW
+                interest_rate: 0.216
+                om_prod: 0.019  # $/kWh      
+    ##
+    # Transmission Lines
+    ##
+     
+    # inter-regional transmission lines
+
+    HVAC_new:  
+        essentials:
+            name: 'New inter-regional transmission'
+            parent: transmission
+            carrier: power
+        constraints:
+            energy_eff: 0.95
+            lifetime: 50
+            energy_cap_min: 0
+        costs:
+            monetary:
+                interest_rate: 0.216
+                om_prod: 0.00167  # €/kWh
+                energy_cap: 800 # €/kW
+    
+ 
+    # local transmission lines
+ 
+    local_transmission_new: 
+        essentials:
+            name: 'New local transmission'
+            parent: transmission
+            carrier: power
+        constraints:
+            energy_eff: 0.85
+            lifetime: 50
+            energy_cap_min: 0
+        costs:
+            monetary:
+                interest_rate: 0.216
+                om_prod: 0.00167  # €/kWh
+                energy_cap: 800 # €/kW
+
+ # international transmission lines
+ 
+    International_HVAC_new:
+        essentials:
+            name: 'New HVAC International transmission'
+            parent: transmission
+            carrier: power
+        constraints:
+            energy_eff: 0.95
+            lifetime: 50
+            energy_cap_min: 0
+        costs:
+            monetary:
+                interest_rate: 0.216
+                om_prod: 0.00167  # $/kWh
+                energy_cap: 800 # $/kW
