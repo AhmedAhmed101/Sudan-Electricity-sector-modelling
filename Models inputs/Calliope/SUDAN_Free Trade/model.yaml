@@ -1,0 +1,54 @@
+import:  # Import other files from paths relative to this file, or absolute paths
+    - 'model_config/techs.yaml'  # This file specifies the model's technologies
+    - 'model_config/locations.yaml'  # This file specifies the model's locations
+    - 'model_config/new_techs.yaml'
+    - 'model_config/new_locations.yaml'
+
+        
+# Model configuration: all settings that affect the built model
+
+model:
+    name: Sudan energy system 5 nodes
+
+    calliope_version: 0.6.8
+
+    timeseries_data_path: 'timeseries_data'
+
+    subset_time: ['2030-01-01', '2030-12-31']  # Subset of timesteps
+    
+ 
+
+# Run configuration: all settings that affect how the built model is run
+
+run:
+    solver: gurobi
+    
+    solver_options:
+        Method: 2
+        Crossover: -0
+        BarConvTol: 1e-4
+        BarHomogeneous: 1
+        BarIterLimit: 3000
+        OptimalityTol: 1e-4
+        FeasibilityTol: 1e-4
+
+    ensure_feasibility: False  # Switches on the "unmet demand" constraint
+
+    bigM: 1e6  # Sets the scale of unmet demand, which cannot be too high, otherwise the optimisation will not converge
+
+    zero_threshold: 1e-10  # Any value coming out of the backend that is smaller than this (due to floating point errors, probably) will be set to zero
+
+    mode: plan  
+    
+    operation:
+        horizon: 48
+        window: 24
+        
+    objective_options:
+        cost_class: {'monetary': 1}
+        
+        
+group_constraints:
+    systemwide_max_slacked_cost:
+        cost_max:
+            monetary: .inf
