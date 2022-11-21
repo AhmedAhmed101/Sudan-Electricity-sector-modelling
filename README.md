@@ -33,6 +33,6 @@ Capacity kW.
 Activity kWh.
 Monetary USD/ capacity or Activity unit.
 
-#Notes:
+# Notes:
 *In calliope the Avilability factor of conventional power plants was only considered for the existing power plants.
 * The capacity factor and resource potential for solar and wind is different in the trade scenario from the BAU and phase-out Scenarios because a different criterion to assess tge potential was adapted.
