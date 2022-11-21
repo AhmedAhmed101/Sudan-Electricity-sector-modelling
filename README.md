@@ -22,3 +22,17 @@ https://hypatia-py.readthedocs.io/en/latest/installation.html
 # Geographical Division of the country: 
 ![Sudan regions](https://user-images.githubusercontent.com/95032502/203135274-9e7c19f7-f6d3-4969-bb93-e2ab90372583.png)
 
+# units 
+For OSeMOSYS and Hypatia the following units were used:
+Capacity GW.
+Activity PJ.
+Monetary million USD/ capacity or Activity unit.
+
+For Calliope: 
+Capacity kW.
+Activity kWh.
+Monetary USD/ capacity or Activity unit.
+
+#Notes:
+*In calliope the Avilability factor of conventional power plants was only considered for the existing power plants.
+* The capacity factor and resource potential for solar and wind is different in the trade scenario from the BAU and phase-out Scenarios because a different criterion to assess tge potential was adapted.
